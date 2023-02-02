@@ -1,19 +1,21 @@
 import React from "react";
 import ImgKeran from "../assets/components/imgkeran";
 import { IoMdMailOpen, IoMdKey } from "react-icons/io";
+import GoogleIcon from "../assets/components/googleicon";
+import TwitterIcon from "../assets/components/twittericon";
 
 function Loginpage() {
   return (
     <div className="flex h-screen">
       <div className="w-1/2 bg-gradient-to-br from-[#98E8FF] to-[#3587A4]">
-        <h2>LOGO</h2>
+        <h2 className="text-btncolor text-3xl p-3">LOGO</h2>
         <ImgKeran className="w-1/2 absolute bottom-0" />
       </div>
       <div className="w-1/2 flex flex-col items-center justify-center px-5">
-        <h2 className="font-bold text-4xl text-primary tracking-widest">
+        <h2 className="font-bold text-4xl text-headercolor tracking-[0.75rem]">
           WELCOME
         </h2>
-        <h3 className="text-sm text-secondary">
+        <h3 className="text-sm text-[#97B2C2]">
           start monitoring your dashboard
         </h3>
         <form className="mt-10 w-2/6 text-center">
@@ -40,13 +42,22 @@ function Loginpage() {
           </label>
           <button
             type="submit"
-            className="w-full mt-16 rounded-md bg-[#3587A4] p-2 text-white font-semibold tracking-widest"
+            className="w-full mt-12 rounded-md bg-[#3587A4] p-3 text-white tracking-widest"
           >
             login
           </button>
         </form>
-        <h2 className="my-10 tracking-widest">OR</h2>
-        <button className="w-2/6 h-8 bg-sky-600"></button>
+        <h2 className="my-10 tracking-[0.5rem] text-btncolor">OR</h2>
+        <div className="space-y-2 flex flex-col items-center justify-center w-2/6">
+          <button className="w-full border border-[#C1DFF0] rounded-md flex items-center p-2">
+            <GoogleIcon className="w-8 h-8" />
+            <p className="mx-auto text-gray-600">Google</p>
+          </button>
+          <button className="w-full p-2 border border-[#C1DFF0] rounded-md flex items-center p-2">
+            <TwitterIcon className="w-8 h-8" />
+            <p className="mx-auto text-gray-600">Twitter</p>
+          </button>
+        </div>
       </div>
     </div>
   );
