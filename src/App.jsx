@@ -2,8 +2,10 @@ import React from "react";
 import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { useAuth } from "./hooks/authentification";
 import BoardLayout from "./layout/BoardLayout";
+import Dashboard from "./layout/Dashboard";
 import BoardHome from "./pages/board/Home";
-import Search from "./pages/board/Search";
+import BoardSearch from "./pages/board/Search";
+
 import Homepage from "./pages/Homepage";
 import Loginpage from "./pages/Loginpage";
 import RegisterPage from "./pages/Registerpage";
@@ -22,7 +24,10 @@ function App() {
               <BoardLayout />
             </RequireAuth>
           }
-        ></Route>
+        >
+          <Route index element={<BoardHome />} />
+          <Route path="search" element={<BoardSearch />} />
+        </Route>
       </Route>
     </Routes>
   );
@@ -30,7 +35,7 @@ function App() {
 
 function RequireAuth({ children }) {
   //let auth = useAuth();
-  let auth = "admin";
+  let auth = "usertest";
   let location = useLocation();
 
   console.log(auth);

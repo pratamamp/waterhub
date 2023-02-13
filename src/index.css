@@ -6,4 +6,7 @@
   .card {
     @apply border-[1.75px] border-gray-200 rounded-md;
   }
+  h3 {
+    @apply text-clip;
+  }
 }

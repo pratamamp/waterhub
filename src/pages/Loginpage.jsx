@@ -3,13 +3,35 @@ import ImgKeran from "../assets/components/imgkeran";
 import { IoMdMailOpen, IoMdKey } from "react-icons/io";
 import GoogleIcon from "../assets/components/googleicon";
 import TwitterIcon from "../assets/components/twittericon";
+import { useNavigate } from "react-router-dom";
+import Logos from "../assets/components/logos";
 
 function Loginpage() {
+  const navigate = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      navigate("/board");
+    } catch (error) {}
+  }
   return (
     <div className="flex h-screen">
-      <div className="w-1/2 bg-gradient-to-br from-[#98E8FF] to-[#3587A4]">
-        <h2 className="text-btncolor text-3xl p-3">LOGO</h2>
-        <ImgKeran className="w-1/2 absolute bottom-0" />
+      <div className="w-1/2 bg-gradient-to-br from-[#09B1E4] to-[#3587A4] relative overflow-hidden">
+        <img
+          src={"/globe.svg"}
+          alt="globe-world"
+          className="absolute w-1/2 -left-1 top-[28%] z-20"
+        />
+        <img
+          src={"/watersplash.svg"}
+          alt="water-splash"
+          className="absolute bottom-0 z-30"
+        />
+        <div
+          className=" mix-blend-soft-light absolute z-10 w-full h-full opacity-40"
+          style={{ backgroundImage: "url(/bglogin.svg)" }}
+        ></div>
       </div>
       <div className="w-1/2 flex flex-col items-center justify-center px-5">
         <h2 className="font-bold text-4xl text-headercolor tracking-[0.75rem]">
@@ -18,7 +40,7 @@ function Loginpage() {
         <h3 className="text-sm text-[#97B2C2]">
           start monitoring your dashboard
         </h3>
-        <form className="mt-10 w-2/6 text-center">
+        <form className="mt-10 w-2/6 text-center" onSubmit={handleSubmit}>
           <label className="relative text-txtcolor focus-within:text-icocolor block mt-2">
             <IoMdMailOpen className="w-8 h-8 pointer-events-none absolute top-1/2 transform -translate-y-1/2 left-3" />
             <input
@@ -53,7 +75,7 @@ function Loginpage() {
             <GoogleIcon className="w-8 h-8" />
             <p className="mx-auto text-gray-600">Google</p>
           </button>
-          <button className="w-full p-2 border border-[#C1DFF0] rounded-md flex items-center p-2">
+          <button className="w-full border border-[#C1DFF0] rounded-md flex items-center p-2">
             <TwitterIcon className="w-8 h-8" />
             <p className="mx-auto text-gray-600">Twitter</p>
           </button>

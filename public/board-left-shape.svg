@@ -1,0 +1,20 @@
+<svg width="749" height="526" viewBox="0 0 749 526" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <filter id="f1" color-interpolation-filters="sRGB">
+     <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.7"/>
+    <feGaussianBlur stdDeviation="1" result="offset-blur" />
+    <feComposite
+    operator='over'
+    in='shadow'
+    in2='SourceGraphic'
+  />
+    </filter>
+    <path d="M749 0H317.5H0V526H231L749 0Z" fill="url(#paint0_linear_25_9)" filter="url(#f1)"/>
+    <defs>
+      
+    <linearGradient id="paint0_linear_25_9" x1="-72.5" y1="61" x2="355.5" y2="717" gradientUnits="userSpaceOnUse" >
+    <stop stop-color="#6A97C9"/>
+    <stop offset="1" stop-color="#80AFCF"/>
+    </linearGradient>
+    </defs>
+</svg>
