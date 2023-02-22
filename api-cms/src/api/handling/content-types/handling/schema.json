@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "handlings",
+  "info": {
+    "singularName": "handling",
+    "pluralName": "handlings",
+    "displayName": "Handling"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "handle_name": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "followup",
+        "onhandle",
+        "resolve",
+        "hold"
+      ]
+    }
+  }
+}

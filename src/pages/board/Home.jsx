@@ -18,20 +18,32 @@ function BoardHome() {
         className="absolute top-0 left-0 -z-20"
       />
 
-      <div className="w-1/5 h-screen px-2 m-5">
+      <div className="w-1/5 h-screen px-2 mx-5 py-2">
         <div className="flex space-x-2 items-center my-5">
           <Logos className="w-10" />
           <h3 className="font-semibold text-white">WaterApp</h3>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 my-10">
           <div className=" rounded-full bg-white w-12 h-12"></div>
           <h2 className="text-sm text-white">Hi, admin</h2>
         </div>
         <div className="w-full flex flex-col items-center bg-white rounded-md shadow-md text-txtcolor font-semibold tracking-wide border border-x-2">
-          <ul className="w-full space-y-3">
+          <ul className="w-full space-y-3 p-10">
             <li className="flex space-x-5 items-center">
               <IoCompassOutline className="w-8 h-8" />
               <h3>Explore</h3>
+            </li>
+            <li className="flex space-x-5 items-center">
+              <IoGrid className="w-8 h-8" />
+              <h3>Dashboard</h3>
+            </li>
+            <li className="flex space-x-5 items-center">
+              <GiPipes className="w-8 h-8" />
+              <h3>Assets</h3>
+            </li>
+            <li className="flex space-x-5 items-center">
+              <HiUsers className="w-8 h-8" />
+              <h3>Customers</h3>
             </li>
             <li className="flex space-x-5 items-center">
               <IoGrid className="w-8 h-8" />
@@ -89,16 +101,12 @@ function BoardHome() {
         <div className="grid grid-cols-9 grid-rows-6 gap-5 text-gray-500 h-[calc(100vh_-_12rem)] p-4 pr-10 pl-5">
           <div
             className="bg-[#ECF0F1] row-span-2
-           col-span-3 rounded-md"
+           col-span-3 rounded-lg"
           >
             1
           </div>
-          <div className="bg-green-200 row-span-6 col-span-6 rounded-md opacity-40">
-            2
-          </div>
-          <div className="bg-pink-200 row-span-4 col-span-3 rounded-md opacity-40">
-            3
-          </div>
+          <div className="bg-sky-200 row-span-6 col-span-6 rounded-lg">2</div>
+          <div className="bg-[#ECF0F1] row-span-4 col-span-3 rounded-lg">3</div>
         </div>
       </div>
     </div>
